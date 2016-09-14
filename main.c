@@ -3,13 +3,18 @@
 
 int main () {
   FILA alunos = novaFila();
-  inserir(alunos, 9);
-  inserir(alunos, 8);
-  inserir(alunos, 3);
-  inserir(alunos, 10);
+  inserirNovo(alunos, 9);
+  inserirAntigo(alunos, 8);
+  inserirNovo(alunos, 3);
+  inserirAntigo(alunos, 10);
 
   imprimirFila(alunos);
 
+  removerAntigo(alunos);
+  imprimirFila(alunos);
+  removerNovo(alunos);
+  imprimirFila(alunos);
+  
   while(!filaVazia(alunos))
     printf ("removido: %d \n", remover(alunos));
 
